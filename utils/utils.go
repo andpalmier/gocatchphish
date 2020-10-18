@@ -8,7 +8,7 @@ import (
 	"unicode"
 )
 
-// config file struct
+// Config file struct
 type Config struct {
 	SuspiciousThreshold int
 	ToRemove            []string
@@ -17,7 +17,7 @@ type Config struct {
 	SuspiciousTlds      []string
 }
 
-// parse config file
+// ParseConfig file
 func ParseConfig(configFile string) Config {
 
 	// open configuration file
@@ -44,6 +44,7 @@ func isMn(r rune) bool {
 	return unicode.Is(unicode.Mn, r)
 }
 
+// NormalizeText function
 func NormalizeText(url string) string {
 	tran := transform.Chain(norm.NFD, transform.RemoveFunc(isMn), norm.NFC)
 	result, _, _ := transform.String(tran, url)

@@ -58,7 +58,7 @@ func main() {
 
 }
 
-// callback function when a newly registered domain is found
+// CheckDomain: callback function when a newly registered domain is found
 func CheckDomain(domain string) (string, bool) {
 	var dom string
 
