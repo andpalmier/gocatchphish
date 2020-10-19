@@ -1,7 +1,7 @@
 # GoCatchPhish
 
 <p align="center">
-  <img alt="gocatchphish.png" src="https://github.com/ashleymcnamara/gophers/blob/master/GOPHER_SAILOR_STRIPE.png"/>
+  <img alt="gocatchphish.png" src="https://github.com/ashleymcnamara/gophers/blob/master/GOPHER_SAILOR_STRIPE.png" width="350"/>
   <p align="center">
     <a href="https://github.com/andpalmier/gocatchphish/blob/master/LICENSE"><img alt="Software License" src="https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square"></a>
     <a href="https://goreportcard.com/report/github.com/andpalmier/gocatchphish"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/andpalmier/gocatchphish?style=flat-square"></a>
