@@ -1,6 +1,6 @@
 {
     "suspiciousthreshold" : 50,
-    "toremove": ["*", "www", "cpanel", "cpcalendars", "cpcontacts", "mail", "webdisk", "webmail"],
+    "toremove": ["*.", "www.", "cpanel.", "cpcalendars.", "cpcontacts.", "mail.", "webdisk.", "webmail."],
     "keywords": {
 	"login": 25,
 	"log-in": 25,

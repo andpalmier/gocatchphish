@@ -46,8 +46,9 @@ func main() {
 			// parse every domain received
 			for _, domain := range domains {
 				dom, res := CheckDomain(domain)
-				if res {
-					fmt.Println(dom)
+				if res > 0 {
+					//fmt.Printf("%s [score: %d]\n",dom,res)
+					fmt.Printf("%s\n", dom)
 				}
 			}
 
@@ -59,7 +60,7 @@ func main() {
 }
 
 // CheckDomain callback function when a newly registered domain is found
-func CheckDomain(domain string) (string, bool) {
+func CheckDomain(domain string) (string, int) {
 	var dom string
 
 	// normalize text
@@ -67,8 +68,8 @@ func CheckDomain(domain string) (string, bool) {
 
 	// remove prefixes which cause duplicates
 	for _, remove := range conf.ToRemove {
-		if strings.Contains(domain, remove) {
-			dom = strings.TrimPrefix(domain, remove+".")
+		if strings.Contains(dom, remove) {
+			dom = strings.TrimPrefix(dom, remove)
 		}
 	}
 
@@ -120,8 +121,8 @@ func CheckDomain(domain string) (string, bool) {
 
 		// return suspicious domains
 		if urlval > conf.SuspiciousThreshold {
-			return dom, true
+			return dom, urlval
 		}
 	}
-	return "", false
+	return "", 0
 }
