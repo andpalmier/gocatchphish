@@ -29,6 +29,8 @@ func main() {
 
 	// specify config file with c
 	flag.StringVar(&configFile, "c", "config.json", "config file")
+	flag.Parse()
+
 	// parse config file
 	conf = utils.ParseConfig(configFile)
 	// from documentation of certstream-go
